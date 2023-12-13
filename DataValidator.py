@@ -21,6 +21,9 @@ validating_data = ValidateData()
 
 user_inputs = ['1','2','3','knock knock','-1','4','5']
 
-validating_data.validate_data_input(user_inputs)
-print('valid data input', validating_data.validate_data_input())
 
+validating_data.validate_data_input(user_inputs)
+print('valid data inputs', validating_data.validate_data)
+
+assert len(validating_data.validate_data) == len([num for num in validating_data.validate_data if num > 0])
+assert all(num > 0 for num in validating_data.validate_data)
