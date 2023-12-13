@@ -4,7 +4,7 @@ class ValidateData:
 
     def validate_data_input(self, validate_input):
         for input in validate_input:
-            if self.is_positive_integer(input):
+            if self.valid_positive_integer(input):
                 self.validate_data.append(int(input))
 
     def valid_positive_integer(self, input):
@@ -20,3 +20,7 @@ class ValidateData:
 validating_data = ValidateData()
 
 user_inputs = ['1','2','3','knock knock','-1','4','5']
+
+validating_data.validate_data_input(user_inputs)
+print('valid data input', validating_data.validate_data_input())
+
